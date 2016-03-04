@@ -1,0 +1,19 @@
+<h1>All Trips</h1>
+<hr />
+
+<% @trips.each do |trip| %>
+  <h3> <%= link_to trip.name, trip_path(trip) %> 
+  </h3>
+
+
+    <button type="button">
+    <%= link_to "Delete", trip_path(trip), method: :delete, data:  {confirm: "Are you sure you want to delte this trip?"} %> 
+    </button>
+    <button type="button">
+    <%= link_to "Edit", edit_trip_path(trip) %>
+    </button> 
+<% end %>
+
+<button type="button">
+<%= link_to "Create Trip", new_trip_path %>
+</button>

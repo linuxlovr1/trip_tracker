@@ -1,0 +1,12 @@
+<%= form_for @trip do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <br />
+  <%= f.label :start %>
+  <%= f.text_field :start, placeholder: "Start" %>
+  <br />
+  <%= f.label :end %>
+  <%= f.text_field :end, placeholder: "End" %>
+  <br />
+  <%= f.submit %>
+<% end %>
